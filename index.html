@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>开关灯</title>
+</head>
+
+<body>
+    <button class="btn">开关灯</button>
+    <script>
+        var btn = document.querySelector('.btn'); // 1.获取.btn按钮元素
+        var bodyEle = document.body; // 2.获取body元素,body属于特殊元素,方法介绍详见day07.04
+        var flag = 1; // 定义一个记录开关灯按钮状态的变量,初始默认置为1,表示电路处于通路,灯泡开启
+        btn.onclick = function() { // 3.注册事件,处理程序
+            // if和else的操作参考day07.12,很经典有用
+            if(flag==1) { 
+                bodyEle.style.backgroundColor = 'black';
+                flag = 0;
+            } else {
+                bodyEle.style.backgroundColor = 'white';
+                flag = 1;
+            }
+        }
+    </script>
+</body>
+
+</html>
